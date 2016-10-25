@@ -92,7 +92,7 @@ OUTCOME
 
 
 ##Shared Knowledge
-![Assessment #3](https://github.com/nsip/sif34_assessment/blob/master/assessment%20update2.png)
+![Assessment #3](https://github.com/nsip/sif34_assessment/blob/master/assessment%20update3.png)
 
 ###Setup
 * There needs to be agreed definitions between sender and receiver of several contextual entities around assessment, if the data exchange around assessment is to make any sense.
