@@ -5,7 +5,14 @@ The NSIP Data Standards Working Group met on Friday 2016-10-21, to discuss the r
 Australian Education. The objects convering NAPLAN assessment were kept out of scope. [NAPLAN Results Reporting](https://github.com/nsip/naplan-results-reporting), 
 [NAPLAN Registration](https://github.com/nsip/registration-data-set)
 
-Key conclusions from Workshop:
+##Starting point
+
+At the start of the workshop, there were two objects in SIF 3.4 addressing formative assessment: GradingAssignment and GradingAssignmentScore. There was also a proposal worked out in conjunction with CEO Melbourne, for StudentGrade: 
+
+ses![As](https://github.com/nsip/sif34_assessment/blob/master/assessment%20update1.png)
+!!
+
+##Key conclusions from Workshop:
 
 * Assessment needs to be contextualised against the syllabus or curriculum being taught, for the data exchange to be interpretable.
 * The syllabus is heterogeneous, and the existence of the Australian Curriculum does not render other syllabuses obsolete.
@@ -13,6 +20,7 @@ Key conclusions from Workshop:
 * Cannot always mandate a syllabus link
 * An assessment may need to align to multiple curricula (e.g. International Baccalaureate)
 * School authorities use syllabus links to determine how much of the curriculum has been covered through assessment
+
 OUTCOME:
 
 
@@ -49,7 +57,7 @@ OUTCOME:
 
 
 
-Other conclusions from Workshop:
+##Other conclusions from Workshop:
 
 * The scoring process may need to be captured
 * Successive submissions of drafts can be tracked
