@@ -1,5 +1,5 @@
 # sif34_assessment
-Assessment Objects to be added to SIF-AU 3.4 (excluding NAPLAN objects)
+Assessment Objects to be added to SIF-AU 3.4 (excluding NAPLAN objects). The following is for feedback.
 
 The NSIP Data Standards Working Group met on Friday 2016-10-21, to discuss the requirements for assessment data objects in 
 Australian Education. The objects convering NAPLAN assessment were kept out of scope. [NAPLAN Results Reporting](https://github.com/nsip/naplan-results-reporting), 
@@ -34,7 +34,7 @@ The following conclusions are referred against this entity-relationship diagram.
 OUTCOME:
 * At this stage, the assessment instrument is represented as the link from GradingAssessment to an online resource or binary attached resource
 * The instrument is accompanied by a descriptor.
-* At a later stage, particulary in summative assessment, an AssessmentItem object may be provided. This is already the case in NAPLAN.
+* At a later stage, particulary in summative assessment, an AssessmentItem object may be provided. This is already to be done for NAPLAN.
 
 ###Assessment Purpose
 
@@ -50,8 +50,12 @@ OUTCOME:
 
 
 OUTCOME
-* An Assessment Purpose field is added to GradingAssignment
+* An Assessment Purpose field is added to GradingAssignment, currently as a text field
 * The assessment purpose will likely need to be enriched significantly, to provide proper context to assessment objects
+
+ACTIONS
+* Please suggest ways in which Assessment Purpose might be coded to reflect your needs.
+
 
 ###Syllabus
 * Assessment needs to be contextualised against the syllabus or curriculum being taught, for the data exchange to be interpretable.
@@ -90,6 +94,8 @@ OUTCOME
 * The Category rubric of GradingAssignment remains open-ended, and can be used to describe a grouping of assessments.
 * The StudentGrade object may link to the GradingAssignmentScore objects that it aggregates over
 
+ACTIONS
+* Please indicate whether information needs to be captured for subtests that cannot be captured with the GradingAssignment object. (Ordering should be indicated through a link attribute.)
 
 ##Shared Knowledge
 ![Assessment #3](https://github.com/nsip/sif34_assessment/blob/master/assessment%20update3.png)
@@ -115,6 +121,10 @@ OUTCOME:
 * That object is not required if the marks are not to be interpreted further
 * That object is not required if the marks are normalised to a mutually agreed scale before data exchange
 
+ACTIONS
+* Please indicate what information should be captured to interpret marks through the MarkValueInfo object. 
+* Refer to ![the SIF-US Gradebook spec](http://specification.sifassociation.org/Implementation/US/2.7M/html/GradeBookWorkingGroup.html#obj:MarkValueInfo) for prior art
+* Different scaling for different year levels may be a requirement for this object; it is not covered in the US spec
 
 ###Syllabus source
 * The agreed knowledge includes the source of the syllabus or curriculum assessed against.
@@ -123,12 +133,19 @@ OUTCOME:
 OUTCOME
 * A Syllabus source object or tag will be added optionally to curriculum statements
 
+ACTIONS
+* Please indicate what information should be captured about the Syllabus or Curriculm that the Learning Standard originates from. 
+* At a minimum, it should include whether it is an individual learning plan or a cohort syllabus, and whether it is formally defined somewhere or not
+
 ###Rubrics
 * Test rubrics will need to be captured 
 
 OUTCOME
 * A Rubric object will be created, with a many-to-many relation to Grading Assignments
 
+ACTIONS
+* Please indicate what information should be captured about the Rubric. 
+* Refer to ![the SIF-US Gradebook spec](http://specification.sifassociation.org/Implementation/US/2.7M/html/AssessmentSif3Namespace.html#obj:Sif3AssessmentRubric) for prior art, though that would be arguably overkill
 
 ##Scoring iterations
 ![Assessment #4](https://github.com/nsip/sif34_assessment/blob/master/assessment%20update4.png)
@@ -140,8 +157,13 @@ OUTCOME
 
 OUTCOME
 * A Grading Assignment Submission Draft object will be added
+  * Alt: the Grading Assignment Score object will be extended to incorporate additional fields, reflecting multiple submissions for the same assignment.
+  * If different submissions are not scored, the score received for the submission in this scenario would need to have some dummy value.
 * The object may include the student artefact
 * The object is timestamped
 * The object will indicate which iteration of submission the draft reflects
 * Each Grading Assignment Submission Draft may be scored separately. This is reflected in an optional link to a separate instance of GradingAssignmentScore
 
+ACTIONS
+* Please indicate whether you need a submission object.
+* Please indicate whether you need the student artefact to be captured, and whether you would use binary encoding to do so.
