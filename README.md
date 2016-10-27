@@ -98,6 +98,7 @@ OUTCOME
 * There needs to be agreed definitions between sender and receiver of several contextual entities around assessment, if the data exchange around assessment is to make any sense.
 * That agreement can occur out of band (mutual knowledge,  but the sender and receiver need to have the option of making the agreement explicit, as part of an initial handshake around the data exchange).
 * The agreed knowledge between sender and receiver can change for any two parties, and even for any given exchange.
+
 OUTCOME:
 * Optional contextual objects will be linked to assessment, to provide information necessary to interpret them
 * Pre-Exchange handshaking will determine whether these contextual objects will need to be exchnaged. 
@@ -108,6 +109,7 @@ OUTCOME:
 * The move from local grading to standardised grading may occur only on import of assessment data.
 * Standardising across multiple grading schemes is difficult; vendors can end up supporting dozens of different file formats
 * Often the original grade is displayed as is, and not processed
+
 OUTCOME:
 * An optional MarkValueInfo object is linked to all instances of scores and marks, to provide the interpretation of those marks
 * That object is not required if the marks are not to be interpreted further
@@ -117,8 +119,15 @@ OUTCOME:
 ###Syllabus source
 * The agreed knowledge includes the source of the syllabus or curriculum assessed against.
 * There may be a need for an external register of learning standards (further discussion)
+
 OUTCOME
 * A Syllabus source object or tag will be added optionally to curriculum statements
+
+###Rubrics
+* Test rubrics will need to be captured 
+
+OUTCOME
+* A Rubric object will be created, with a many-to-many relation to Grading Assignments
 
 
 ##Scoring iterations
@@ -135,9 +144,4 @@ OUTCOME
 * The object is timestamped
 * The object will indicate which iteration of submission the draft reflects
 * Each Grading Assignment Submission Draft may be scored separately. This is reflected in an optional link to a separate instance of GradingAssignmentScore
-
-##Other conclusions from Workshop:
-
-
-* Test rubrics will need to be captured (deferred)
 
