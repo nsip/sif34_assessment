@@ -5,7 +5,7 @@ The NSIP Data Standards Working Group met on Friday 2016-10-21, to discuss the r
 Australian Education. The objects convering NAPLAN assessment were kept out of scope. [NAPLAN Results Reporting](https://github.com/nsip/naplan-results-reporting), 
 [NAPLAN Registration](https://github.com/nsip/registration-data-set)
 
-##Starting point
+## Starting point
 
 At the start of the workshop, there were two objects in SIF 3.4 addressing formative assessment: GradingAssignment and GradingAssignmentScore. There was also a proposal worked out in conjunction with CEO Melbourne, for StudentGrade, capturing the teacher judgement of a student's progress in a subject, against specific curriculum objectives: 
 
@@ -13,19 +13,19 @@ At the start of the workshop, there were two objects in SIF 3.4 addressing forma
 
 These objects were the departutre point for the workshop.
 
-##Key findings from Workshop: General
+## Key findings from Workshop: General
 
 * NAPLAN SIF objects will remain idiosyncratic
 * It should be possible to use the same set of objects for formative and summative assessment, at a first cut
 * Objects specific to particular assessment activities or use cases may be added as needed
 
-##Key conclusions from Workshop: Immediate changes
+## Key conclusions from Workshop: Immediate changes
 
 The following conclusions are referred against this entity-relationship diagram.
 
 ![Assessment #2](https://github.com/nsip/sif34_assessment/blob/master/assessment%20update2.png)
 
-###Assessment Instrument
+### Assessment Instrument
 
 * School authorities are rarely interested in gathering the test instrument (assessment form, assignment); they are more interested in the assessment results.
 * However the test instrument may be consulted to make sense of the results.
@@ -36,7 +36,7 @@ OUTCOME:
 * The instrument is accompanied by a descriptor.
 * At a later stage, particulary in summative assessment, an AssessmentItem object may be provided. This is already to be done for NAPLAN.
 
-###Assessment Purpose
+### Assessment Purpose
 
 * The purpose of assessment differentiates different kinds of assessment, as context
 * That includes where the assessment is intended for
@@ -57,7 +57,7 @@ ACTIONS
 * Please suggest ways in which Assessment Purpose might be coded to reflect your needs.
 
 
-###Syllabus
+### Syllabus
 * Assessment needs to be contextualised against the syllabus or curriculum being taught, for the data exchange to be interpretable.
 * The syllabus is heterogeneous, and the existence of the Australian Curriculum does not render other syllabuses obsolete.
 * The syllabus can include local ad hoc entries, and entries specific to a student (learning plan).
@@ -74,7 +74,7 @@ OUTCOME:
   * The learning standard object is not presupposed to belong to a formal curriculum. It may belong to an individual learning plan, or an ad hoc learning objective
   * Not all learning standard objects are presupposed to belong to the same curriculum
 
-###Expected Score
+### Expected Score
 * The score received for an assessment is often contrasted against the expected or predicted score
 * The expected score can be used to substitute for the received score, where the received score is unavailable (the student has not done the assessment, and will not be penalised for it)
 
@@ -83,7 +83,7 @@ OUTCOME:
   * The current mandatory link remains, but becomes optional, and indicates the received score. 
   * An additional optional link is added, to indicate the expected or predicted score.
 
-###Compositionality
+### Compositionality
 * Assessments can be aggregated into other assessments
 * Assessments can be grouped by semester; by practical or written statues, and by other  categories
 * The report of a student’s progress over a marking term is based on assessments that they have undergone during the term
@@ -97,10 +97,10 @@ OUTCOME
 ACTIONS
 * Please indicate whether information needs to be captured for subtests that cannot be captured with the GradingAssignment object. (Ordering should be indicated through a link attribute.)
 
-##Shared Knowledge
+## Shared Knowledge
 ![Assessment #3](https://github.com/nsip/sif34_assessment/blob/master/assessment%20update3.png)
 
-###Setup
+### Setup
 * There needs to be agreed definitions between sender and receiver of several contextual entities around assessment, if the data exchange around assessment is to make any sense.
 * That agreement can occur out of band (mutual knowledge,  but the sender and receiver need to have the option of making the agreement explicit, as part of an initial handshake around the data exchange).
 * The agreed knowledge between sender and receiver can change for any two parties, and even for any given exchange.
@@ -110,7 +110,7 @@ OUTCOME:
 * Pre-Exchange handshaking will determine whether these contextual objects will need to be exchnaged. 
 * Within an enterprise, these contextual objects typically will not be exchanged, as their value will be understood.
 
-###Score
+### Score
 * The agreed knowledge includes the interpretation of marks (minimum value, maximum value, distribution, metric)
 * The move from local grading to standardised grading may occur only on import of assessment data.
 * Standardising across multiple grading schemes is difficult; vendors can end up supporting dozens of different file formats
@@ -126,7 +126,7 @@ ACTIONS
 * Refer to ![the SIF-US Gradebook spec](http://specification.sifassociation.org/Implementation/US/2.7M/html/GradeBookWorkingGroup.html#obj:MarkValueInfo) for prior art
 * Different scaling for different year levels may be a requirement for this object; it is not covered in the US spec
 
-###Syllabus source
+### Syllabus source
 * The agreed knowledge includes the source of the syllabus or curriculum assessed against.
 * There may be a need for an external register of learning standards (further discussion)
 
@@ -137,7 +137,7 @@ ACTIONS
 * Please indicate what information should be captured about the Syllabus or Curriculm that the Learning Standard originates from. 
 * At a minimum, it should include whether it is an individual learning plan or a cohort syllabus, and whether it is formally defined somewhere or not
 
-###Rubrics
+### Rubrics
 * Test rubrics will need to be captured 
 
 OUTCOME
@@ -147,7 +147,7 @@ ACTIONS
 * Please indicate what information should be captured about the Rubric. 
 * Refer to ![the SIF-US Gradebook spec](http://specification.sifassociation.org/Implementation/US/2.7M/html/AssessmentSif3Namespace.html#obj:Sif3AssessmentRubric) for prior art, though that would be arguably overkill
 
-##Scoring iterations
+## Scoring iterations
 ![Assessment #4](https://github.com/nsip/sif34_assessment/blob/master/assessment%20update4.png)
 
 * The scoring process may need to be captured
