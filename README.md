@@ -1,4 +1,9 @@
 # sif34_assessment
+
+*** DEPRECATED (RETIRED) ***
+
+*This repository is obsolete and retired (archived). This is an unmantained repository. In particular, note that it is not being updated with security patches, including those for dependent libraries.*
+
 Assessment Objects to be added to SIF-AU 3.4 (excluding NAPLAN objects). The following is for feedback.
 
 The NSIP Data Standards Working Group met on Friday 2016-10-21, to discuss the requirements for assessment data objects in 
